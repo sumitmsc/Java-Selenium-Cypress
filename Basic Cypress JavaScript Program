@@ -1,0 +1,6 @@
+describe('Cypress Example', () => {
+    it('Visits Example Website', () => {
+        cy.visit('https://example.com');
+        cy.title().should('include', 'Example');
+    });
+});
