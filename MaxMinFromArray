@@ -1,0 +1,22 @@
+public class MaxMinArray {
+    public static void main(String[] args) {
+        int[] array = {12, 3, 45, 7, 23, 56, 2};
+        int[] result = findMaxMin(array);
+        System.out.println("Maximum: " + result[0]);
+        System.out.println("Minimum: " + result[1]);
+    }
+
+    public static int[] findMaxMin(int[] array) {
+        int max = array[0];
+        int min = array[0];
+        for (int num : array) {
+            if (num > max) {
+                max = num;
+            }
+            if (num < min) {
+                min = num;
+            }
+        }
+        return new int[]{max, min};
+    }
+}
